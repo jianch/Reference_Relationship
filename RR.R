@@ -47,8 +47,9 @@ print(crossref_citation("10.3998/3336451.0009.101"), style = "Bibtex")
 
 ## use system command in r
 # get reference part of a pdf document
-ref = system("pdf-extract extract --references /Users/JIANCHEN/GitHub/Reference_Relationship/1403.2805.pdf", intern=TRUE)
+ref = system("pdf-extract extract --references /Users/JIANCHEN/GitHub/Reference_Relationship/pdfs/1403.2805.pdf", intern=TRUE)
 ref[22]
-
+ref = system("pdf-extract extract --references /Users/JIANCHEN/GitHub/Reference_Relationship/pdfs/4.pdf", intern=TRUE)
+ref[30]
 
 
