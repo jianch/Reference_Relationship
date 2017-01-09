@@ -35,15 +35,20 @@ count_identifiers("datacite")
 print(crossref_citation("10.3998/3336451.0009.101"), style = "Bibtex")
 
 
-## pdf extract tool
+## install pdf extract tool in your macOS (my version is 10.12.2) via Terminal
 #  # https://github.com/CrossRef/pdfextract
 # use ruby in terminal, can extract referece part
+# Open Terminal
+#   sudo gem pdf-extract
+#   sudo gem uninstall pdf-reader              # remove old version 
+#   sudo gem install pdf-reader -v 1.2.0       # install version 1.2.0
 
 
 
 ## use system command in r
-x = system('ruby "pdf-extract extract --references /Users/JIANCHEN/GitHub/Reference_Relationship/1403.2805.pdf"', intern=TRUE)
-x
+# get reference part of a pdf document
+ref = system("pdf-extract extract --references /Users/JIANCHEN/GitHub/Reference_Relationship/1403.2805.pdf", intern=TRUE)
+ref[22]
 
 
 
